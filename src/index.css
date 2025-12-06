@@ -1,0 +1,47 @@
+/* 🎨 Paleta 60/30/10 */
+:root {
+--blanco-perla: #fae3eb;  /* 60% fondo */
+--rosa-pastel: #F4C9D4; /* 30% base */
+--rosa-empolvado: #fd3da3; /* 10% acento visible */
+--malva-suave: #C9A4CF;/* detalles */
+--lila-claro: #d7b6dd;  /* decorativo */
+}
+
+/* Base global */
+/* 🔥 CORRECCIÓN: Usar min-height para permitir el scroll de la ventana */
+html, body, #root {
+min-height: 100vh; /* Permite que el contenido se desborde */
+margin: 0;
+padding: 0;
+
+/* ✅ Usa tu color de fondo principal */
+background-color: var(--blanco-perla);
+
+/* ✅ Texto por defecto en un tono oscuro suave para contraste */
+color: #2d2d2d;
+font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+/* transiciones suaves para que los cambios no se vean bruscos */
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Reset y consistencia general */
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+/* Scrollbar pastel suave */
+::-webkit-scrollbar {
+width: 8px; /* Lo aumenté para que se vea mejor */
+}
+
+::-webkit-scrollbar-thumb {
+background: var(--rosa-empolvado);
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+background: var(--rosa-pastel);
+}
