@@ -1,9 +1,10 @@
 :root {
-  --blanco-perla: #fae3eb;
-  --rosa-pastel: #F4C9D4;
-  --rosa-empolvado: #fd3da3;
-  --malva-suave: #C9A4CF;
-  --lila-claro: #d7b6dd;
+  /* Colores masculinos basados en la imagen (Azul Marino y Blanco/Plateado) */
+  --blanco-puro: #FFFFFF;
+  --azul-marino: #002C6F; /* Color de fondo oscuro principal */
+  --gris-claro-brillante: #C0C0C0; /* Color para botón y detalles */
+  --azul-real: #0056B3; /* Azul más brillante para hover */
+  --plata-brillante: #E0E0E0; /* Otro tono claro para contraste */
 }
 
 /* ============================== */
@@ -11,10 +12,12 @@
 /* ============================== */
 
 .fondo_invitacion {
-  height: 100vh;
+  height: auto;
+  /* El fondo ahora usa la variable de color si quieres un color sólido, 
+  o mantiene tu imagen de fondo original (FondoLuis.jpeg) con un overlay azul. */
   background:
-    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url("/src/assets/imagenes/fond.jpeg") no-repeat center center;
+    linear-gradient(rgba(0, 44, 111, 0.2), rgba(0, 44, 111, 0.5)), /* Overlay azul más sutil */
+    url("/src/assets/imagenes/FondoLuis.jpeg") no-repeat center center;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -23,30 +26,31 @@
 
 .overlay {
   text-align: center;
-  color: var(--blanco-perla);
+  color: var(--blanco-puro); /* Texto en blanco puro */
   padding: 2rem;
 }
 
 /* Título principal */
-.Titulo_adriana_Principal {
+.Titulo_luis_Principal {
   font-family: 'Beau Rivage', 'Alex Brush', serif;
   font-size: 2.5rem;
   /* BASE MÓVIL */
   font-weight: 800;
-  color: #ffffff;
+  color: var(--blanco-puro); /* Texto en blanco */
   text-align: center;
   letter-spacing: 0.1em;
-  text-shadow: 2px 2px 5px #fd3da3;
+  /* Sombra de texto en azul real */
+  text-shadow: 2px 2px 5px var(--azul-real); 
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-/* Subtítulos */
+/* Subtítulos (No aparece en tu código HTML actual, pero actualizo el color) */
 .text_letraModerna {
   font-family: 'Georgia', serif;
   font-style: italic;
   font-size: 2.2rem;
-  color: var(--rosa-pastel);
+  color: var(--plata-brillante); /* Color plateado */
   margin-bottom: 2rem;
 }
 
@@ -54,8 +58,9 @@
 .mensaje_invitacion {
   font-family: 'Beau Rivage', cursive;
   font-size: 2rem;
-  color: #ffffff;
-  text-shadow: 0 0 8px #ff0088;
+  color: var(--blanco-puro); /* Texto en blanco */
+  /* Sombra de texto en gris claro/plata */
+  text-shadow: 0 0 8px var(--gris-claro-brillante); 
   letter-spacing: 1px;
   padding-top: 50px;
   padding-bottom: 10px;
@@ -67,8 +72,8 @@
   padding: 1rem;
   font-size: 1rem;
   font-weight: bold;
-  color: var(--blanco-perla);
-  background: var(--rosa-empolvado);
+  color: var(--azul-marino); /* Texto oscuro en el botón */
+  background: var(--gris-claro-brillante); /* Botón en color plateado/gris claro */
   border-radius: 10px;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
@@ -77,17 +82,16 @@
 }
 
 .btn_verInvitacion:hover {
-  background: var(--malva-suave);
+  background: var(--plata-brillante); /* Se aclara al pasar el ratón */
   transform: translateY(-3px);
 }
-
 
 
 /* ============================== */
 /* 📱 MÓVILES GRANDES (>=480px) */
 /* ============================== */
 @media (min-width: 480px) {
-  .Titulo_adriana_Principal {
+  .Titulo_luis_Principal {
     font-size: 4rem;
   }
 
@@ -97,7 +101,7 @@
 /* 📲 TABLETS (>=768px) */
 /* ============================== */
 @media (min-width: 768px) {
-  .Titulo_adriana_Principal {
+  .Titulo_luis_Principal {
     font-size: 5rem;
   }
   .btn_verInvitacion {
@@ -110,17 +114,17 @@
 /* 💻 LAPTOPS (>=1100px) */
 /* ============================== */
 @media (min-width: 1100px) {
-  .Titulo_adriana_Principal {
+  .Titulo_luis_Principal {
     font-size: 6rem;
   }
- 
+  
 }
 
 /* ============================== */
 /* 🖥 PANTALLAS GRANDES (>=1400px) */
 /* ============================== */
 @media (min-width: 1400px) {
-  .Titulo_adriana_Principal {
+  .Titulo_luis_Principal {
     font-size: 6.5rem;
   }
 }
