@@ -1,22 +1,17 @@
+/* Variables de color (asumimos que están definidas en el :root o se usan directamente) */
+/* --- Colores de referencia --- */
+/* --azul-marino: #002C6F; */
+/* --plata-brillante: #E0E0E0; */
+/* --oro-acento: #FFC72C; */
+/* --azul-real: #0056B3; */
+
 .hora-container {
     width: 100%;
     text-align: center;
     padding: 40px 20px;
-
     border-radius: 20px;
 }
 
-/* TÍTULO */
-.hora-fecha {
-    font-size: 2rem;
-    letter-spacing: 2px;
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #fd009c;
-    /* rosa fuerte */
-    font-family: "Playfair Display", serif;
-}
 
 /* CARD */
 .hora-card {
@@ -28,28 +23,25 @@
     width: max-content;
     margin: 0 auto;
 
-    background: #f5d3df;
-    /* rosa pastel */
+    /* Fondo: Plata Brillante (tono claro) */
+    background: #E0E0E0; 
     padding: 18px 30px;
 
     border-radius: 15px;
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
-    border: 2px solid #fd009c;
-    /* borde rosado del calendario */
+    /* Borde: Azul Marino */
+    border: 2px solid #0056B3; 
 }
 
 .hora-icon {
     font-size: 1.8rem;
-    color: #fd009c;
-    /* dorado */
+    color: #0056B3; /* Icono: Dorado */
 }
 
 .hora-text {
-
     font-size: 1.8rem;
     font-weight: 700;
-    color: #fd009c;
-    /* dorado */
+    color: #002C6F; /* Texto principal de la hora: Azul Marino */
 }
 
 /* ANIMACIÓN: “LATIDO suave” */
@@ -73,23 +65,22 @@
 
 /* TEXTO FINAL */
 .hora-detalle {
-
     font-family: 'Beau Rivage', 'Alex Brush', serif;
     font-size: 2rem;
-    color: rgb(255, 255, 255);
-    text-shadow: 0 0 4px rgb(255, 131, 218);
+    /* Color de fondo del texto: Blanco */
+    color: rgb(255, 255, 255); 
+    /* Sombra del texto: Azul Real */
+    text-shadow: 0 0 4px rgba(53, 84, 255, 0.575); 
     text-align: center;
     padding: 0px 20px 0px 20px;
-    /* arriba | lados | abajo */
     margin: 20px auto 5px auto;
-    /* arriba | lados | abajo */
     width: 90%;
     margin-top: 25px;
-    color: #333;
-   
+    /* Color del texto fijo (para override): Azul Marino */
+    color: #000000; 
 }
 
 .puntualidad {
-    color: #fd009c;
-    
+    color: #007bff; /* Destacar "puntualidad" con Azul Real */
+    text-shadow: 0 0 4px rgba(88, 99, 255, 0.788); 
 }

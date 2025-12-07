@@ -10,21 +10,23 @@ function Musica() {
     const handlePlayPause = () => {
         if (isPlaying) {
             audioRef.current.pause();
+            // Colores para PAUSA (Azul Zafiro y Plata)
             toast.error("⏸ Música pausada", {
                 style: {
-                    border: '2px solid #fd009c',
-                    color: '#fd009c',
-                    background: '#FFD1DC',
+                    border: '2px solid #084C9F', /* Borde: Azul Zafiro */
+                    color: '#084C9F',             /* Texto: Azul Zafiro */
+                    background: '#E0E0E0',        /* Fondo: Plata Brillante */
                     fontWeight: 'bold'
                 },
             });
         } else {
             audioRef.current.play();
+            // Colores para PLAY (Oro y Plata)
             toast.success("Reproduciendo música...", {
                 style: {
-                    border: '2px solid #B48FCB',
-                    color: '#B48FCB',
-                    background: '#FFD1DC',
+                    border: '2px solid #FFC72C',  /* Borde: Oro */
+                    color: '#084C9F',             /* Texto: Azul Zafiro */
+                    background: '#E0E0E0',        /* Fondo: Plata Brillante */
                     fontWeight: 'bold'
                 },
             });
@@ -36,7 +38,7 @@ function Musica() {
         <div className="musica-container">
             <h2 className="titulo-musica">Presiona Play para escuchar mi cancion</h2>
             {/* Audio */}
-            <audio ref={audioRef} src="/Adriana/musica/Adas.mp3" preload="auto"></audio>
+            <audio ref={audioRef} src="/Luis/musica/Adas.mp3" preload="auto"></audio>
 
             {/* Controles */}
             <div className="controles-musica">

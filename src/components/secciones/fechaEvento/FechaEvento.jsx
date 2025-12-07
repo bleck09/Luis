@@ -3,10 +3,13 @@ import "./FechaEvento.css";
 
 export default function FechaEvento() {
   const year = 2025;
-  const monthIndex = 11; // diciembre
+  const monthIndex = 11; // 11 = Diciembre (JavaScript usa 0 para Enero)
   const firstDay = new Date(year, monthIndex, 1);
-  const firstWeekday = (firstDay.getDay() + 6) % 7; // empieza lunes
+  const firstWeekday = (firstDay.getDay() + 6) % 7; // El 1 de Diciembre 2025 es Lunes (empieza lunes)
   const daysInMonth = new Date(year, monthIndex + 1, 0).getDate();
+
+  // DÍA DEL EVENTO: Cambiado de 20 a 14
+  const EVENTO_DIA = 14; 
 
   const cells = [];
   for (let i = 0; i < firstWeekday; i++) cells.push(null);
@@ -30,7 +33,9 @@ export default function FechaEvento() {
 
           <div className="grid-days">
             {cells.map((d, i) => {
-              const isEvento = d === 20;
+              // === CAMBIO CLAVE: El día especial es ahora el 14 ===
+              const isEvento = d === EVENTO_DIA; 
+              
               return (
                 <div
                   key={i}
@@ -53,7 +58,6 @@ export default function FechaEvento() {
           </div>
         </div>
       </div>
-
     </section>
   );
 }

@@ -1,11 +1,12 @@
 
 /* Variables de color */
 :root {
-    --blanco-perla: #fae3eb;
-    --rosa-pastel: #F4C9D4;
-    --rosa-empolvado: #fd3da3;
-    --malva-suave: #C9A4CF;
-    --lila-claro: #d7b6dd;
+
+     --blanco-puro: #FFFFFF;
+    --azul-marino: #002C6F; /* Color de fondo oscuro principal */
+    --gris-claro-brillante: #C0C0C0; /* Color para botón y detalles */
+    --azul-real: #0056B3; /* Azul más brillante para hover */
+    --plata-brillante: #E0E0E0; /* Otro tono claro para contraste */
 }
 
 /* ============================== */
@@ -20,7 +21,7 @@
 
     font-size: 1rem;
     color: #ffffff;
-    text-shadow: 0 0 8px rgb(255, 127, 238);
+    text-shadow: 0 0 8px #C0C0C0;
     text-align: center;
     padding: 20px 20px 0px 20px;
     /* arriba | lados | abajo */
@@ -33,7 +34,7 @@
     font-family: 'Beau Rivage', 'Alex Brush', serif;
     font-size: 2rem;
     color: rgb(255, 255, 255);
-    text-shadow: 0 0 8px rgb(255, 0, 179);
+    text-shadow: 0 0 8px #002C6F;
     text-align: center;
     padding: 0px 20px 0px 20px;
     /* arriba | lados | abajo */
@@ -52,7 +53,7 @@
     text-align: center;
     letter-spacing: 0.1em;
     margin-top: 50px;
-    text-shadow: 2px 2px 5px rgb(255, 0, 242);
+    text-shadow: 2px 2px 5px #002C6F;
 
 }
 
@@ -78,8 +79,8 @@
     flex-direction: column;
 
     background:
-        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-        url("/src/assets/imagenes/fondoPrimavera9.jpeg") no-repeat center center;
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url("/src/assets/imagenes/Fondo1.jpeg") no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
 
@@ -97,9 +98,9 @@
     bottom: 0;
 
     background: linear-gradient(to bottom,
-            rgba(250, 227, 235, 0) 60%,
+            rgba(255, 249, 249, 0) 60%,
             /* transparente en la mayor parte */
-            rgba(250, 227, 235, 1)
+            #E0E0E0
             /* se vuelve color #fae3eb abajo */
         );
 
@@ -134,7 +135,7 @@
 
     background:
         linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-        url("/src/assets/imagenes/fondoPrimavera9.jpeg") no-repeat center center;
+        url("/src/assets/imagenes/Fondo1.jpeg") no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
 
@@ -152,13 +153,13 @@
     bottom: 0;
 
     background: linear-gradient(to bottom,
-            rgba(250, 227, 235, 1),
+            #E0E0E0,
             /* parte superior sólida */
             rgba(250, 227, 235, 0) 15%,
             /* desvanecido */
             rgba(250, 227, 235, 0) 85%,
             /* centro transparente */
-            rgba(250, 227, 235, 1)
+           #E0E0E0
             /* parte inferior sólida */
         );
 
@@ -203,13 +204,13 @@
     bottom: 0;
 
     background: linear-gradient(to bottom,
-            rgba(250, 227, 235, 1),
+           #E0E0E0,
             /* color sólido arriba */
             rgba(250, 227, 235, 0) 15%,
             /* desvanecido */
             rgba(250, 227, 235, 0) 85%,
             /* centro transparente */
-            rgba(250, 227, 235, 1)
+           #E0E0E0
             /* color sólido abajo */
         );
 

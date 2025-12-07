@@ -6,7 +6,7 @@ function Hora() {
   return (
     <div className="hora-container">
       
-      <h2 className="hora-fecha">SÁBADO 20 DE DICIEMBRE</h2>
+     
 
       <div className="hora-card">
         <FaClock className="hora-icon" />

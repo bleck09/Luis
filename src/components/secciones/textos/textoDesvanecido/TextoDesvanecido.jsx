@@ -18,17 +18,18 @@ const buildKeyframes = (from, steps) => {
 
 const TextoDesvanecido = ({
     text = "",
-    delay = 200,
+    delay = 10,
     className = "",
     animateBy = "words",
     direction = "top",
     threshold = 0.1,
     rootMargin = "0px",
     animationFrom,
+    
     animationTo,
     easing = (t) => t,
     onAnimationComplete,
-    stepDuration = 0.35,
+    stepDuration = 0.5,
 }) => {
     const elements =
         animateBy === "words" ? text.split(" ") : text.split("");
@@ -95,7 +96,9 @@ const TextoDesvanecido = ({
                 flexWrap: "wrap",
                 justifyContent: "center", // ✅ centra horizontalmente
                 textAlign: "center",      // ✅ centra el texto dentro
-                width: "100%",            // que ocupe todo el ancho
+                width: "100%",       // que ocupe todo el ancho
+                // === AÑADIR ESPACIO LATERAL AQUÍ ===
+                padding: "0 30px",
             }}
         >
             {elements.map((segment, index) => {
@@ -107,7 +110,7 @@ const TextoDesvanecido = ({
                 const spanTransition = {
                     duration: totalDuration,
                     times,
-                    delay: (index * delay) / 1000,
+                    delay: (index * delay) / 5000,
                     ease: easing,
                 };
 

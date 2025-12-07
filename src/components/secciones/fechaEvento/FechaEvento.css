@@ -1,3 +1,14 @@
+/* Variables de color */
+:root {
+  /* Colores masculinos basados en la imagen (Azul Marino y Blanco/Plateado) */
+  --blanco-puro: #FFFFFF;
+  --azul-marino: #002C6F; /* Color de fondo oscuro principal */
+  --gris-claro-brillante: #C0C0C0; /* Color para botón y detalles */
+  --azul-real: #0056B3; /* Azul más brillante para hover y acento */
+  --plata-brillante: #E0E0E0; /* Otro tono claro para contraste */
+  --oro-acento: #FFC72C; /* Dorado para acentos especiales */
+}
+
 .fechaEvento-wrap {
   display: flex;
   justify-content: center;
@@ -6,11 +17,13 @@
 }
 
 .cal-card {
-  background: rgba(255, 244, 250, 0.25);
+  /* Fondo: Transparente con un toque de Plata Brillante */
+  background: rgba(224, 224, 224, 0.25); 
   backdrop-filter: blur(12px);
   border-radius: 20px;
   padding: 20px;
-  box-shadow: 0 0 25px rgba(253, 0, 156, 0.2);
+  /* Sombra: Azul Marino semi-transparente */
+  box-shadow: 0 0 25px rgba(0, 44, 111, 0.514); 
   max-width: 400px;
   width: 100%;
 }
@@ -18,9 +31,10 @@
 .mes-titulo {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
-  background: linear-gradient(90deg, #fd009c, #ffd700);
+  /* Degradado: Azul Marino (#002C6F) a Dorado (#FFC72C) */
+  background: linear-gradient(90deg, var(--azul-marino), var(--oro-acento));
   background-clip: text;
-  -webkit-background-clip: text; /* soporte Safari */
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
   margin-bottom: 10px;
@@ -32,7 +46,7 @@
   text-align: center;
   font-weight: bold;
   margin-bottom: 8px;
-  color: #fd009c;
+  color: var(--azul-real); /* Azul Real para la leyenda (días de la semana) */
 }
 
 .grid-days {
@@ -47,7 +61,7 @@
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  color: #4c0040;
+  color: var(--azul-marino); /* Azul Marino para los días normales */
   position: relative;
 }
 
@@ -67,24 +81,26 @@
 .corazon {
   position: absolute;
   font-size: 2rem;
-  color: #fd009c;
+  color: var(--azul-real); /* Dorado para el corazón/sello */
   animation: latido 1s infinite;
 }
 
 .numero-dia {
   position: absolute;
   font-weight: bold;
-  color: #fff;
+  color: var(--blanco-puro); /* Blanco para el número sobre el corazón */
   font-size: 1rem;
 }
 
 /* Animación de latido */
 @keyframes latido {
+  /* No se necesita cambiar colores, solo escala */
   0%, 100% { transform: scale(2.5); }
   50% { transform: scale(2.7); }
 }
 
 /* RESPONSIVE */
+/* (Se mantienen igual, solo se han cambiado los colores en las clases utilizadas) */
 @media(max-width: 768px) {
   .cal-card {
     max-width: 90%;
@@ -102,7 +118,7 @@
   }
 
   .corazon {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 
   .numero-dia {
@@ -137,6 +153,3 @@
     font-size: 2rem;
   }
 }
-
-
-

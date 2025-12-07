@@ -12,7 +12,7 @@
 /* ============================== */
 
 .fondo_invitacion {
-  height: auto;
+  height: 100vh;
   /* El fondo ahora usa la variable de color si quieres un color sólido, 
   o mantiene tu imagen de fondo original (FondoLuis.jpeg) con un overlay azul. */
   background:
