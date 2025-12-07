@@ -4,9 +4,9 @@ import { FaCheckCircle } from "react-icons/fa";
 import './ConfirmarAsistencia.css';
 
 function ConfirmarAsistencia() {
-    const whatsappNumber = "+59168580574";
+    const whatsappNumber = "+59168542532";
     const mensaje = encodeURIComponent(
-        "¡Hola! Gracias por la invitación, confirmo mi asistencia al XV de Adriana Belén..."
+        "¡Hola! Gracias por la invitación, confirmo mi asistencia a la Primera Comunión de Luis Miguel..."
     );
     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${mensaje}`;
 

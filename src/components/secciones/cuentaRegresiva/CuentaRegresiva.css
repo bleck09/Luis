@@ -10,7 +10,7 @@
 }
 
 .countdown-item {
-  background: linear-gradient(145deg, #ffe6f3, #ffd7f1);
+  background: linear-gradient(145deg, #c5caf7, #32beff);
   border-radius: 16px;
   width: 90px;
   height: 90px;
@@ -18,8 +18,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 20px rgba(253, 0, 156, 0.3);
-  color: #4c0040;
+  box-shadow: 0 8px 20px rgb(51, 86, 247);
+  color: #404dff;
   font-family: 'Orbitron', sans-serif;
   transition: transform 0.3s;
 }
@@ -31,7 +31,7 @@
 .numero {
   font-size: 2rem;
   font-weight: 700;
-  color: #fd009c;
+  color: #574bff;
 }
 
 .label {
